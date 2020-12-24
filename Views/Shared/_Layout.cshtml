@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>@ViewBag.Title - PatagonWeb</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:title" content="@ViewBag.Title - PatagonWeb">
+    <meta property="og:type" content="@ViewBag.OGType">
+    <meta property="og:url" content="https://sirpatagon.net/@ViewBag.OGPath">
+    <meta property="og:image" content="@ViewBag.OGImage">
+    @RenderSection("OGAppendices", required: false)
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+
+    <link rel="stylesheet" href="~/3rd-party/css/normalize.css">
+    <link rel="stylesheet" href="~/3rd-party/css/milligram.min.css" />
+    @if (!hostingEnv.IsDevelopment())
+    {
+        <link rel="stylesheet" href="~/style/main.min.css" />
+    }
+    else
+    {
+        <link rel="stylesheet" href="~/style/main.css" />
+    }
+    @RenderSection("Styles", required: false)
+
+    <meta name="theme-color" content="#fafafa">
+</head>
+<body>
+    @RenderBody()
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
