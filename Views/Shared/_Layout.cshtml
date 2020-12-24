@@ -30,7 +30,13 @@
     <meta name="theme-color" content="#fafafa">
 </head>
 <body>
-    @RenderBody()
+    <div id="page">
+        @RenderBody()
+    </div>
+    @RenderSection("Templates", required: false)
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="~/scripts/base.js"></script>
     @RenderSection("Scripts", required: false)
+    <script src="~/scripts/page.js"></script>
 </body>
 </html>

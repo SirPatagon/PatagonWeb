@@ -3,8 +3,16 @@
     ViewBag.Title = "Home Page";
     ViewBag.OGType = "website";
 }
+@section Templates {
+    @await Html.PartialAsync("/Templates/_Logo.cshtml")
+}
+@section Scripts {
+    <script src="~/scripts/logo.js"></script>
+}
 
 <div>
     <h1>@Localizer["Welcome"]</h1>
+    <logo></logo>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    {{ globalProps.darkMode }}
 </div>
