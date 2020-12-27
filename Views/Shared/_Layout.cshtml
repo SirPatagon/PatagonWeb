@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>@ViewBag.Title - PatagonWeb</title>
-    <meta name="description" content="">
+    <title>SirPatagon.net - @ViewBag.Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta property="og:title" content="@ViewBag.Title - PatagonWeb">
@@ -14,6 +13,9 @@
 
     <link rel="manifest" href="site.webmanifest">
     <link rel="apple-touch-icon" href="icon.png">
+
+    <link rel="preload" href="~/3rd-party/fonts/fa-brands-400.woff2" />
+    <link rel="preload" href="~/3rd-party/fonts/fa-solid-900.woff2" />
 
     <link rel="stylesheet" href="~/3rd-party/css/normalize.css">
     <link rel="stylesheet" href="~/3rd-party/css/milligram.min.css" />
@@ -26,11 +28,29 @@
         <link rel="stylesheet" href="~/style/main.css" />
     }
     @RenderSection("Styles", required: false)
+    <link rel="stylesheet" href="~/3rd-party/css/font-awesome.min.css" />
 
     <meta name="theme-color" content="#fafafa">
 </head>
 <body>
-    @RenderBody()
+    <div id="page">
+        <div :class="{ dark: globalProps.darkMode, light: !globalProps.darkMode }">
+            <!--googleoff: index-->
+            <div aria-hidden="true" class="background">{{ bgCode }}</div>
+            <!--googleon: index-->
+            @RenderBody()
+            <sp-lang-changer></sp-lang-changer>
+            <sp-theme-changer></sp-theme-changer>
+        </div>
+    </div>
+    @RenderSection("Templates", required: false)
+    @await Html.PartialAsync("/Templates/_LangChanger.cshtml")
+    @await Html.PartialAsync("/Templates/_ThemeChanger.cshtml")
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="~/scripts/base.js"></script>
     @RenderSection("Scripts", required: false)
+    <script src="~/scripts/langchanger.js"></script>
+    <script src="~/scripts/themechanger.js"></script>
+    <script src="~/scripts/page.js"></script>
 </body>
 </html>

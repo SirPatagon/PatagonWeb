@@ -1,0 +1,11 @@
+@import '_functions.scss';
+
+.theme-changer {
+    @include position(fixed, 64px, 16px);
+    padding: 0;
+    margin: 0;
+    width: 42px;
+    line-height: normal;
+    box-sizing: content-box;
+    font-size: 24px;
+}

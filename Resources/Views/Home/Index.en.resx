@@ -117,7 +117,71 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Welcome" xml:space="preserve">
-    <value>Welcome</value>
+  <data name="AboutText" xml:space="preserve">
+    <value>Welcome to my Website!&lt;br&gt;
+I am a software developer from Osnabrück, Germany. I specialize on web technologies and user interface design.&lt;br&gt;
+When developing software I lay my focus primarily on the user experience. I ask myself: "Would I be able to use this user interface without problems? Would &lt;i&gt;I&lt;/i&gt; want to use this program/this website?".&lt;br&gt;
+If the answer to that is "No", I will continue to refactor it until I can answer both of my questions with a clear "Yes".&lt;br&gt;
+Currently I work on a bigger project: My own &lt;a href="https://en.wikipedia.org/wiki/Content_management_system" target="_blank" rel="noreferrer"&gt;CMS&lt;/a&gt; named &lt;a href="https://github.com/SirPatagon/Puzzle"&gt;Puzzle&lt;/a&gt;.</value>
+  </data>
+  <data name="AboutTitle" xml:space="preserve">
+    <value>About me</value>
+  </data>
+  <data name="ArrowText" xml:space="preserve">
+    <value>More</value>
+  </data>
+  <data name="FeedSubTitle" xml:space="preserve">
+    <value>GitHub/GitLab Activity</value>
+  </data>
+  <data name="HomeTitle" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="LanguageBad" xml:space="preserve">
+    <value>Bad</value>
+  </data>
+  <data name="LanguageEnglish" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="LanguageGerman" xml:space="preserve">
+    <value>German</value>
+  </data>
+  <data name="LanguageGood" xml:space="preserve">
+    <value>Good</value>
+  </data>
+  <data name="LanguageIntermediate" xml:space="preserve">
+    <value>Intermediate</value>
+  </data>
+  <data name="LanguageJapanese" xml:space="preserve">
+    <value>Japanese</value>
+  </data>
+  <data name="LanguagePerfect" xml:space="preserve">
+    <value>Perfect</value>
+  </data>
+  <data name="LanguagesSubTitle" xml:space="preserve">
+    <value>Languages</value>
+  </data>
+  <data name="LanguageVeryGood" xml:space="preserve">
+    <value>Very Good</value>
+  </data>
+  <data name="PageDescription" xml:space="preserve">
+    <value>I am a software developer from Osnabrück, Germany. I specialize on web technologies and user interface design.</value>
+  </data>
+  <data name="ProjectsTitle" xml:space="preserve">
+    <value>Projects</value>
+  </data>
+  <data name="TechnologiesSubTitle" xml:space="preserve">
+    <value>Some of the technologies I work with</value>
+  </data>
+  <data name="TechnologyCaddy" xml:space="preserve">
+    <value>Ever since a colleague from work recommended it to me, I only use Caddy to host my websites. It is easy to configure and gets SSL-Certificates for you automatically. Since version 2 came out configuration got a bit more complex, but over all I think it is still easier than nginx or Apache.</value>
+  </data>
+  <data name="TechnologyDocker" xml:space="preserve">
+    <value>I like to use Docker for managing my server applications, because when every application is locked in a container, they won't be able to deeply invade the operating system. With Docker I can control all applications from one central point and uninstall them, if I want, without them leaving a trace.</value>
+  </data>
+  <data name="TechnologyNET" xml:space="preserve">
+    <value>I use the .NET Framework to program most of my applications, as I have a lot to do with it at work and therefore I am very familiar with it.</value>
+  </data>
+  <data name="TechnologyVue" xml:space="preserve">
+    <value>Vue.js grew to be my favorite JavaScript framework, as it allows me to build my web applications modularly and according to the MVVM pattern.</value>
   </data>
 </root>

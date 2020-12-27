@@ -1,0 +1,6 @@
+<template id="lang-changer">
+    <button type="button" class="language-changer" @@click="changeLanguage">
+        <img src="~/res/English.svg" v-if="currentLanguage === 'de'" alt="English" />
+        <img src="~/res/German.svg" v-if="currentLanguage === 'en'" alt="Deutsch" />
+    </button>
+</template>

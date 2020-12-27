@@ -1,10 +1,170 @@
 @inject IViewLocalizer Localizer
 @{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = Localizer["HomeTitle"];
     ViewBag.OGType = "website";
 }
+@section Styles {
+    <meta name="description" content="@Localizer["PageDescription"]" />
+}
+@section Templates {
+    @await Html.PartialAsync("/Templates/_Logo.cshtml")
+    @await Html.PartialAsync("/Templates/_Header.cshtml")
+    @await Html.PartialAsync("/Templates/_Meter.cshtml")
+    @await Html.PartialAsync("/Templates/_Feed.cshtml")
+}
+@section Scripts {
+    <script src="~/scripts/logo.js"></script>
+    <script src="~/scripts/header.js"></script>
+    <script src="~/scripts/meter.js"></script>
+    <script src="~/scripts/feed.js"></script>
+}
+<sp-header arrow-text="@Localizer["ArrowText"]"></sp-header>
 
-<div>
-    <h1>@Localizer["Welcome"]</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<main id="content">
+    <article class="row">
+        <section class="column column-flex-66">
+            <h2>@Localizer["AboutTitle"]</h2>
+            <p>@Localizer["AboutText"]</p>
+            <table>
+                <colgroup>
+                    <col style="width: 4rem;" />
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th colspan="2">
+                            @Localizer["LanguagesSubTitle"]
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>@Localizer["LanguageGerman"]</td>
+                        <td>
+                            <sp-meter value="10" low="4" high="6" optimum="8" max="10"></sp-meter>
+                            <span>@Localizer["LanguagePerfect"]</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>@Localizer["LanguageEnglish"]</td>
+                        <td>
+                            <sp-meter value="9" low="4" high="6" optimum="8" max="10"></sp-meter>
+                            <span>@Localizer["LanguageVeryGood"]</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>@Localizer["LanguageJapanese"]</td>
+                        <td>
+                            <sp-meter value="3" low="4" high="6" optimum="8" max="10"></sp-meter>
+                            <span>@Localizer["LanguageBad"]</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>
+                            <sp-meter value="10" low="4" high="6" optimum="8" max="10"></sp-meter>
+                            <span>@Localizer["LanguagePerfect"]</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>HTML</td>
+                        <td>
+                            <sp-meter value="10" low="4" high="6" optimum="8" max="10"></sp-meter>
+                            <span>@Localizer["LanguagePerfect"]</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>CSS</td>
+                        <td>
+                            <sp-meter value="9" low="4" high="6" optimum="8" max="10"></sp-meter>
+                            <span>@Localizer["LanguageVeryGood"]</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>C#</td>
+                        <td>
+                            <sp-meter value="8" low="4" high="6" optimum="8" max="10"></sp-meter>
+                            <span>@Localizer["LanguageVeryGood"]</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>XAML</td>
+                        <td>
+                            <sp-meter value="8" low="4" high="6" optimum="8" max="10"></sp-meter>
+                            <span>@Localizer["LanguageVeryGood"]</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>SASS</td>
+                        <td>
+                            <sp-meter value="7" low="4" high="6" optimum="8" max="10"></sp-meter>
+                            <span>@Localizer["LanguageGood"]</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>LESS</td>
+                        <td>
+                            <sp-meter value="7" low="4" high="6" optimum="8" max="10"></sp-meter>
+                            <span>@Localizer["LanguageGood"]</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>C</td>
+                        <td>
+                            <sp-meter value="6" low="4" high="6" optimum="8" max="10"></sp-meter>
+                            <span>@Localizer["LanguageGood"]</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="column column-flex-33">
+            <table class="tech-table">
+                <thead>
+                    <tr>
+                        <th colspan="2">
+                            @Localizer["TechnologiesSubTitle"]
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="https://dotnet.microsoft.com/" target="_blank" rel="noreferrer"><img src="~/res/NET.svg" alt=".NET" /></a></td>
+                        <td>@Localizer["TechnologyNET"]</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://vuejs.org/" target="_blank" rel="noreferrer"><img src="~/res/Vue.svg" alt="Vue.js" /></a></td>
+                        <td>@Localizer["TechnologyVue"]</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://caddyserver.com/" target="_blank" rel="noreferrer"><img src="~/res/Caddy.svg" alt="Caddy" /></a></td>
+                        <td>@Localizer["TechnologyCaddy"]</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.docker.com/" target="_blank" rel="noreferrer"><img src="~/res/Docker.svg" alt="Docker" /></a></td>
+                        <td>@Localizer["TechnologyDocker"]</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </article>
+    <article class="row">
+        <section class="column">
+            <h2>@Localizer["ProjectsTitle"]</h2>
+            <div class="project-container">
+                <a href="https://github.com/SirPatagon/Puzzle#readme" rel="noreferrer" class="button">
+                    <i class="fab fa-github"></i>
+                    <span>Puzzle</span>
+                </a>
+            </div>
+        </section>
+        <section class="column">
+            <sp-feed title="@Localizer["FeedSubTitle"]"></sp-feed>
+        </section>
+    </article>
+    <hr />
+    <div class="clearfix">
+        <div class="float-right">
+            <img src="~/res/Watermark.svg" width="160" alt="Made by SirPatagon" />
+        </div>
+    </div>
+</main>
