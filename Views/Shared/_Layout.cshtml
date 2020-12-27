@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -14,8 +14,8 @@
     <link rel="manifest" href="site.webmanifest">
     <link rel="apple-touch-icon" href="icon.png">
 
-    <link rel="preload" href="~/3rd-party/fonts/fa-brands-400.woff2" />
-    <link rel="preload" href="~/3rd-party/fonts/fa-solid-900.woff2" />
+    <link rel="preload" href="~/3rd-party/fonts/fa-brands-400.woff2" as="font" />
+    <link rel="preload" href="~/3rd-party/fonts/fa-solid-900.woff2" as="font" />
 
     <link rel="stylesheet" href="~/3rd-party/css/normalize.css">
     <link rel="stylesheet" href="~/3rd-party/css/milligram.min.css" />
@@ -46,11 +46,18 @@
     @RenderSection("Templates", required: false)
     @await Html.PartialAsync("/Templates/_LangChanger.cshtml")
     @await Html.PartialAsync("/Templates/_ThemeChanger.cshtml")
-    <script src="https://unpkg.com/vue@next"></script>
-    <script src="~/scripts/base.js"></script>
+    @if (!hostingEnv.IsDevelopment())
+    {
+        <script src="~/3rd-party/js/vue.global.prod.js"></script>
+    }
+    else
+    {
+        <script src="https://unpkg.com/vue@3.0.4"></script>
+    }
+    <script src="~/scripts/base.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)
-    <script src="~/scripts/langchanger.js"></script>
-    <script src="~/scripts/themechanger.js"></script>
-    <script src="~/scripts/page.js"></script>
+    <script src="~/scripts/langchanger.js" asp-append-version="true"></script>
+    <script src="~/scripts/themechanger.js" asp-append-version="true"></script>
+    <script src="~/scripts/page.js" asp-append-version="true"></script>
 </body>
 </html>

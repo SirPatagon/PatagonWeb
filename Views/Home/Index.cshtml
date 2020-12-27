@@ -14,10 +14,10 @@
     @await Html.PartialAsync("/Templates/_Feed.cshtml")
 }
 @section Scripts {
-    <script src="~/scripts/logo.js"></script>
-    <script src="~/scripts/header.js"></script>
-    <script src="~/scripts/meter.js"></script>
-    <script src="~/scripts/feed.js"></script>
+    <script src="~/scripts/logo.js" asp-append-version="true"></script>
+    <script src="~/scripts/header.js" asp-append-version="true"></script>
+    <script src="~/scripts/meter.js" asp-append-version="true"></script>
+    <script src="~/scripts/feed.js" asp-append-version="true"></script>
 }
 <sp-header arrow-text="@Localizer["ArrowText"]"></sp-header>
 
