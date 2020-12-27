@@ -1,10 +1,10 @@
 components.push({
-    name: 'sp-logo', obj: {
+    name: 'sp-header', obj: {
         inject: ['globalProps'],
-        template: getTemplate('logo'),
+        props: ['arrowText'],
+        template: getTemplate('header'),
         data() {
             return {
-                counter: 42
             };
         }
     }

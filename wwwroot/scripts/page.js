@@ -4,7 +4,11 @@ var app = Vue.createApp({
         return {
             globalProps: Vue.reactive({
                 darkMode: isDarkMode()
-            })
+            }),
+            bgCode: document.getElementsByTagName('html')[0].innerHTML.replace('\n', '') +
+                document.getElementsByTagName('html')[0].innerHTML.replace('\n', '') +
+                document.getElementsByTagName('html')[0].innerHTML.replace('\n', '') +
+                document.getElementsByTagName('html')[0].innerHTML.replace('\n', '')
         };
     },
     provide() {

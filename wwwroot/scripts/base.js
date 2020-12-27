@@ -1,20 +1,19 @@
 'use strict';
 var components = [];
 
-var params = location.search
-    .substr(1)
-    .split('&')
-    .map(i => { return { key: i.split('=')[0], value: i.split('=')[1] } });
+var params = new URLSearchParams(location.search);
 
 function getTemplate(id) {
     return document.getElementById(id).innerHTML;
 }
 
 function getParameterValue(key) {
-    var find = params.find(i => i.key === key);
-    if (find !== undefined)
-        return find.value;
-    return undefined;
+    return params.get(key);
+}
+
+function setParameterValue(key, value) {
+    params.set(key, value);
+    location.search = params.toString();
 }
 
 function isDarkMode() {

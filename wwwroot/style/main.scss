@@ -1,2 +1,150 @@
-﻿body {
+@import 'dark_theme.scss';
+@import 'light_theme.scss';
+@import 'header.scss';
+@import 'langchanger.scss';
+@import 'themechanger.scss';
+@import 'meter.scss';
+
+:root {
+    --primary-color: #4465A4;
+    --secondary-color: #87AADE;
+    --tertiary-color: #4F5867;
+}
+html {
+    scroll-behavior: smooth;
+}
+body, html, #page, .dark, .light {
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+.dark, .light {
+    color: var(--main-foreground);
+}
+
+.background {
+    @include position(fixed, 0, 0, 0, 0);
+    background: var(--main-background);
+    font-family: 'Fira Code', Consolas, monospace;
+    font-size: 1.75vh;
+    word-break: break-all;
+    color: var(--dim-foreground);
+    overflow: hidden;
+    z-index: -1;
+    pointer-events: none;
+}
+
+main {
+    width: 100%;
+    max-width: 128rem;
+    margin: 0 auto;
+    margin-top: 150px;
+    background: var(--main-background);
+    box-shadow: 0px 0px 80px 120px var(--main-background);
+    padding: 0 1rem 2rem;
+}
+
+a {
+    color: var(--primary-color);
+
+    &:hover {
+        color: var(--secondary-color);
+    }
+}
+
+table {
+    display: table;
+}
+
+.button, button, input[type='button'], input[type='reset'], input[type='submit'] {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+
+    &:hover {
+        background-color: var(--secondary-color);
+        border-color: var(--secondary-color);
+    }
+}
+
+td, th {
+    border-bottom-color: var(--main-foreground);
+
+    &.has-icon {
+        padding: 0;
+        text-align: center;
+        font-size: 24px;
+    }
+
+    &.has-date {
+        text-align: right;
+    }
+}
+
+hr {
+    border-top-color: var(--main-foreground);
+}
+
+.row {
+    @media (min-width: 40rem) {
+        flex-direction: column;
+        margin-left: 0;
+        width: 100%;
+    }
+    /* Larger than tablet screen */
+    @media (min-width: 80.0rem) {
+        flex-direction: row;
+        margin-left: -1.0rem;
+        width: calc(100% + 2.0rem);
+    }
+
+    .column-flex-33 {
+        flex: 0 0 33%;
+    }
+
+    .column-flex-66 {
+        flex: 0 0 66%;
+    }
+}
+
+.tech-table tr > td:first-child {
+    padding: 0;
+    width: 64px;
+}
+.tech-table tr > td:last-child {
+    padding-left: 2rem;
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    a.button {
+        height: auto;
+        width: 186px;
+        height: 128px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem 2rem 1rem;
+        margin: 1rem;
+
+        i {
+            display: block;
+            font-size: 48px;
+            opacity: .3;
+        }
+
+        img {
+            display: block;
+            width: 48px;
+        }
+
+        span {
+            display: block;
+            max-width: 100%;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    }
 }
