@@ -117,66 +117,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AboutText" xml:space="preserve">
-    <value>Welcome to my website!&lt;br&gt;
-I'm SirPatagon, you can also call me Patrick. I finished my apprenticeship as an IT specialist in 2018 and since then I'm working as a full stack developer in the area of .NET. However, when possible, I like to focus on the &lt;i&gt;frontend&lt;/i&gt;.&lt;br&gt;
-Privately, I also deal a lot with hosting and managing server systems, as well as AI. Besides computer science I am very interested in geography, language, history, culture, music, theology/mythology, philosophy, physics and chemistry.</value>
+  <data name="AboutMe" xml:space="preserve">
+    <value>Über mich</value>
   </data>
-  <data name="AboutTitle" xml:space="preserve">
-    <value>About me</value>
+  <data name="FindMeOnText" xml:space="preserve">
+    <value>Finde mich auf:</value>
   </data>
-  <data name="FeedSubTitle" xml:space="preserve">
-    <value>GitHub/GitLab Activity</value>
+  <data name="GitHub" xml:space="preserve">
+    <value>GitHub</value>
   </data>
-  <data name="HomeTitle" xml:space="preserve">
-    <value>Home</value>
+  <data name="GitLab" xml:space="preserve">
+    <value>GitLab</value>
   </data>
-  <data name="LanguageBad" xml:space="preserve">
-    <value>Entry level</value>
+  <data name="Gmail" xml:space="preserve">
+    <value>Gmail</value>
   </data>
-  <data name="LanguageEnglish" xml:space="preserve">
-    <value>English</value>
+  <data name="Mastodon" xml:space="preserve">
+    <value>Mastodon</value>
   </data>
-  <data name="LanguageGerman" xml:space="preserve">
-    <value>German</value>
+  <data name="Steam" xml:space="preserve">
+    <value>Steam</value>
   </data>
-  <data name="LanguageGood" xml:space="preserve">
-    <value>Good</value>
+  <data name="Twitter" xml:space="preserve">
+    <value>Twitter</value>
   </data>
-  <data name="LanguageIntermediate" xml:space="preserve">
-    <value>Intermediate</value>
-  </data>
-  <data name="LanguageJapanese" xml:space="preserve">
-    <value>Japanese</value>
-  </data>
-  <data name="LanguagePerfect" xml:space="preserve">
-    <value>Perfect</value>
-  </data>
-  <data name="LanguagesSubTitle" xml:space="preserve">
-    <value>Languages</value>
-  </data>
-  <data name="LanguageVeryGood" xml:space="preserve">
-    <value>Very Good</value>
-  </data>
-  <data name="PageDescription" xml:space="preserve">
-    <value>I am SirPatagon. I am working as a full stack developer in the area of .NET. However, when possible, I like to focus on the frontend.</value>
-  </data>
-  <data name="ProjectsTitle" xml:space="preserve">
-    <value>Projects</value>
-  </data>
-  <data name="TechnologiesSubTitle" xml:space="preserve">
-    <value>Some of the technologies I work with</value>
-  </data>
-  <data name="TechnologyCaddy" xml:space="preserve">
-    <value>Ever since a colleague from work recommended it to me, I only use Caddy to host my websites. It is easy to configure and gets SSL-Certificates for you automatically. Since version 2 came out configuration got a bit more complex, but over all I think it is still easier than nginx or Apache.</value>
-  </data>
-  <data name="TechnologyDocker" xml:space="preserve">
-    <value>I like to use Docker for managing my server applications, because when every application is locked in a container, they won't be able to deeply invade the operating system. With Docker I can control all applications from one central point and uninstall them, if I want, without them leaving a trace.</value>
-  </data>
-  <data name="TechnologyNET" xml:space="preserve">
-    <value>I use the .NET Framework to program most of my applications, as I have a lot to do with it at work and therefore I am very familiar with it.</value>
-  </data>
-  <data name="TechnologyVue" xml:space="preserve">
-    <value>Vue.js grew to be my favorite JavaScript framework, as it allows me to build my web applications modularly and according to the MVVM pattern.</value>
+  <data name="YouTube" xml:space="preserve">
+    <value>YouTube</value>
   </data>
 </root>

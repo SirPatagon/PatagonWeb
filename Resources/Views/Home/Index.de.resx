@@ -119,25 +119,23 @@
   </resheader>
   <data name="AboutText" xml:space="preserve">
     <value>Willkommen auf meiner Webseite!&lt;br&gt;
-Ich bin Softwareentwickler und komme aus Osnabrück. Ich setze mich hauptsächlich mit Web-Technologien und Oberflächengestaltung auseinander.&lt;br&gt;
-Während der Entwicklung von Software versuche ich primär auf die User Experience zu achten. Ich stelle mir dabei die Frage: „Würde ich &lt;i&gt;persönlich&lt;/i&gt; mit dieser Oberfläche zurechtkommen und dieses Programm/diese Webseite gerne verwenden?“.&lt;br&gt;
-Ist die Antwort darauf „Nein“, überarbeite ich die Oberfläche so lange bis es ein klares „Ja“ ist.&lt;br&gt;
-Aktuell arbeite ich an einem größeren Projekt: Ein eigenes &lt;a href="https://de.wikipedia.org/wiki/Content-Management-System" target="_blank" rel="noreferrer"&gt;CMS&lt;/a&gt; namens &lt;a href="https://github.com/SirPatagon/Puzzle"&gt;Puzzle&lt;/a&gt;.</value>
+Ich bin SirPatagon, Du kannst mich auch Patrick nennen. Ich habe 2018 meine Ausbildung zum Fachinformatiker abgeschlossen und bin seitdem als Full Stack-Entwickler im Bereich .NET tätig. Hierbei fokussiere ich mich allerdings wo es mir möglich ist auf das Thema &lt;i&gt;Frontend&lt;/i&gt;.&lt;br&gt;
+Privat setze ich mich außerdem viel mit Hosting und Verwalten von Serversystemen, sowie KI auseinander. Neben Informatik interessiere ich mich sehr für Themengebiete Geographie, Sprache, Geschichte, Kultur, Musik, Theologie/Mythologie, Philosophie, Physik und Chemie.</value>
   </data>
   <data name="AboutTitle" xml:space="preserve">
     <value>Über mich</value>
   </data>
-  <data name="ArrowText" xml:space="preserve">
-    <value>Mehr</value>
-  </data>
   <data name="FeedSubTitle" xml:space="preserve">
     <value>GitHub/GitLab Aktivität</value>
+  </data>
+  <data name="FindMeOnText" xml:space="preserve">
+    <value>Du kannst mich hier finden:</value>
   </data>
   <data name="HomeTitle" xml:space="preserve">
     <value>Startseite</value>
   </data>
   <data name="LanguageBad" xml:space="preserve">
-    <value>Schlecht</value>
+    <value>Einstiegslevel</value>
   </data>
   <data name="LanguageEnglish" xml:space="preserve">
     <value>Englisch</value>
@@ -164,7 +162,7 @@ Aktuell arbeite ich an einem größeren Projekt: Ein eigenes &lt;a href="https:/
     <value>Sehr Gut</value>
   </data>
   <data name="PageDescription" xml:space="preserve">
-    <value>Ich bin Softwareentwickler aus Osnabrück und setze mich hauptsächlich mit Web-Technologien und Oberflächengestaltung auseinander.</value>
+    <value>Ich bin SirPatagon. Ich bin als Full Stack-Entwickler im Bereich .NET tätig. Hierbei fokussiere ich mich allerdings möglichst auf das Thema Frontend.</value>
   </data>
   <data name="ProjectsTitle" xml:space="preserve">
     <value>Projekte</value>

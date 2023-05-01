@@ -8,7 +8,7 @@
 :root {
     --primary-color: #4465A4;
     --secondary-color: #87AADE;
-    --tertiary-color: #4F5867;
+    --tertiary-color: #3771C8;
 }
 html {
     scroll-behavior: smooth;
@@ -45,7 +45,7 @@ main {
 }
 
 a {
-    color: var(--primary-color);
+    color: var(--tertiary-color);
 
     &:hover {
         color: var(--secondary-color);
@@ -117,9 +117,10 @@ hr {
 .project-container {
     display: flex;
     flex-wrap: wrap;
+
     a.button {
         height: auto;
-        width: 186px;
+        width: 180px;
         height: 128px;
         display: flex;
         flex-direction: column;
@@ -127,11 +128,13 @@ hr {
         align-items: center;
         padding: 2rem 2rem 1rem;
         margin: 1rem;
+        line-height: 2rem;
 
         i {
             display: block;
             font-size: 48px;
-            opacity: .3;
+            opacity: .5;
+            margin-bottom: 1rem;
         }
 
         img {
@@ -142,9 +145,7 @@ hr {
         span {
             display: block;
             max-width: 100%;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
+            white-space: normal;
         }
     }
 }
