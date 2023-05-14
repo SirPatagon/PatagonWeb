@@ -19,7 +19,7 @@
     <script src="~/scripts/meter.js" asp-append-version="true"></script>
     <script src="~/scripts/feed.js" asp-append-version="true"></script>
 }
-<sp-header arrow-text="@Localizer["ArrowText"]"></sp-header>
+<sp-header></sp-header>
 
 <main id="content">
     <article class="row">
@@ -119,46 +119,22 @@
             </table>
         </section>
         <section class="column column-flex-33">
-            <table class="tech-table">
-                <thead>
-                    <tr>
-                        <th colspan="2">
-                            @Localizer["TechnologiesSubTitle"]
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><a href="https://dotnet.microsoft.com/" target="_blank" rel="noreferrer"><img src="~/res/NET.svg" alt=".NET" /></a></td>
-                        <td>@Localizer["TechnologyNET"]</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://vuejs.org/" target="_blank" rel="noreferrer"><img src="~/res/Vue.svg" alt="Vue.js" /></a></td>
-                        <td>@Localizer["TechnologyVue"]</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://caddyserver.com/" target="_blank" rel="noreferrer"><img src="~/res/Caddy.svg" alt="Caddy" /></a></td>
-                        <td>@Localizer["TechnologyCaddy"]</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://www.docker.com/" target="_blank" rel="noreferrer"><img src="~/res/Docker.svg" alt="Docker" /></a></td>
-                        <td>@Localizer["TechnologyDocker"]</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-    </article>
-    <article class="row">
-        <section class="column">
             <h2>@Localizer["ProjectsTitle"]</h2>
             <div class="project-container">
                 <a href="https://github.com/SirPatagon/Puzzle#readme" rel="noreferrer" class="button">
                     <i class="fab fa-github"></i>
                     <span>Puzzle</span>
                 </a>
+                <a href="https://github.com/SirPatagon/StableDiffusionUI" rel="noreferrer" class="button">
+                    <i class="fab fa-github"></i>
+                    <span>Stable Diffusion UI</span>
+                </a>
+                <a href="https://github.com/SirPatagon/LCARS" rel="noreferrer" class="button">
+                    <i class="fab fa-github"></i>
+                    <span>LCARS</span>
+                </a>
             </div>
-        </section>
-        <section class="column">
+            <br />
             <sp-feed title="@Localizer["FeedSubTitle"]"></sp-feed>
         </section>
     </article>

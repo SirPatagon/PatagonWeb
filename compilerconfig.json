@@ -1,6 +1,11 @@
-﻿[
-  {
-    "outputFile": "wwwroot/style/main.css",
-    "inputFile": "wwwroot/style/main.scss"
-  }
+[
+    {
+        "outputFile": "wwwroot/style/main.css",
+        "inputFile": "wwwroot/style/main.scss",
+        "useNodeSass": true,
+        "options": {
+            "sourceMap": true,
+            "relativeUrls": false
+        }
+    }
 ]

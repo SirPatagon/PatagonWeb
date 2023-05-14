@@ -17,7 +17,7 @@ components.push({
                 locale: getParameterValue('lang') || (navigator.language || navigator.userLanguage).substring(0, 2),
                 dateOptions: {
                     year: 'numeric',
-                    month: 'short',
+                    month: 'numeric',
                     day: 'numeric'
                 },
                 timeOptions: {
