@@ -13,7 +13,7 @@ export default {
 <style lang="scss">
 @import '@/styles/_Variables.scss';
 .sp-header {
-    height: calc(100vh - $navbar-height);
+    height: calc(75vh - $navbar-height);
     display: flex;
     justify-content: center;
     align-items: center;
