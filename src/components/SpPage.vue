@@ -36,7 +36,7 @@ export default {
         justify-content: center;
         align-items: center;
         overflow: hidden;
-        background: linear-gradient(135deg, #000 0%, #1a001a 100%);
+        background: $purple-gradient;
         background-attachment: fixed;
         font-size: 18px;
 

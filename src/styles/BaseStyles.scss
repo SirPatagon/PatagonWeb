@@ -1,5 +1,6 @@
 @import 'fonts/FiraCode.scss';
 @import '_Mixins.scss';
+@import '_Variables.scss';
 html,
 body,
 #app {
@@ -8,7 +9,7 @@ body,
 }
 
 html {
-    background: linear-gradient(135deg, #000 0%, #1a001a 100%);
+    background: $purple-gradient;
     background-attachment: fixed;
     // backdrop-filter: grayscale(100%);
     color: #fff;
