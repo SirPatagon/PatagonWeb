@@ -9,6 +9,8 @@ body,
 }
 
 html {
+    --x: 50%;
+    --y: 50%;
     background: $purple-gradient;
     background-attachment: fixed;
     // backdrop-filter: grayscale(100%);

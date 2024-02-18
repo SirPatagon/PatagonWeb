@@ -1,2 +1,2 @@
 $navbar-height: 3rem;
-$purple-gradient: linear-gradient(135deg, #000 0%, #320032 100%);
+$purple-gradient: radial-gradient(circle at left var(--x) top var(--y), #320032 0%, #000 100%);
