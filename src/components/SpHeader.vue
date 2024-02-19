@@ -13,10 +13,19 @@ export default {
 <style lang="scss">
 @import '@/styles/_Variables.scss';
 .sp-header {
-    height: calc(75vh - $navbar-height);
+    height: calc(50vh - $navbar-height);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    transform: scale(.75);
+
+    @media screen and (min-height: 500px) {
+        transform: none;
+    }
+
+    @media screen and (orientation: landscape) {
+        height: calc(75vh - $navbar-height);
+    }
 }
 </style>

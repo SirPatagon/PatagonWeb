@@ -2,10 +2,29 @@
     <div class="sp-page">
         <slot name="header"></slot>
         <nav class="sp-page__nav">
-            <div class="sp-page__nav__background"></div>
-            <router-link to="/">Home</router-link>
-            &emsp;|&emsp;
-            <router-link to="/about">Projects</router-link>
+            <div class="sp-page__nav__content">
+                <router-link class="sp-page__nav__link" to="/">
+                    <span class="sp-page__nav__link__content">
+                        <span class="sp-page__nav__link__icon">󰋜</span>
+                        <br>
+                        Home
+                    </span>
+                </router-link>
+                <router-link class="sp-page__nav__link" to="/projects">
+                    <span class="sp-page__nav__link__content">
+                        <span class="sp-page__nav__link__icon">󱃖</span>
+                        <br>
+                        Projects
+                    </span>
+                </router-link>
+                <router-link class="sp-page__nav__link" to="/about">
+                    <span class="sp-page__nav__link__content">
+                        <span class="sp-page__nav__link__icon">󰛓</span>
+                        <br>
+                        About me
+                    </span>
+                </router-link>
+            </div>
         </nav>
         <main class="sp-page__content">
             <slot/>
@@ -38,7 +57,6 @@ export default {
         overflow: hidden;
         background: $purple-gradient;
         background-attachment: fixed;
-        font-size: 18px;
 
         &::before {
             content: '';
@@ -52,12 +70,51 @@ export default {
             z-index: -1;
         }
 
-        a {
-            font-weight: bold;
+        &__content {
+            max-width: 1200px;
+            width: 100%;
+            display: flex;
+        }
+
+        &__link {
             text-decoration: none;
+            text-align: center;
+            font-size: 1rem;
+            width: 100%;
+            position: relative;
+
+            &[href] {
+                color: #fffa;
+            }
+
+            &::before{
+                content:'';
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                transition: background-color .3s ease;
+            }
+
+            &:hover::before {
+                background-color: #fff1;
+            }
+
+            &:active::before {
+                background-color: #fff2;
+            }
 
             &.router-link-exact-active {
-                @include gradient-text;
+                * {
+                    @include gradient-text;
+                }
+            }
+
+            &__icon {
+                display: inline-block;
+                font-size: 1.5em;
+                padding-right: 0.3rem; // fix for strange icon width
             }
         }
     }
