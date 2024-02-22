@@ -5,21 +5,21 @@
             <div class="sp-page__nav__content">
                 <router-link class="sp-page__nav__link" to="/">
                     <span class="sp-page__nav__link__content">
-                        <span class="sp-page__nav__link__icon">󰋜</span>
+                        <span class="sp-icon">󰋜</span>
                         <br>
                         Home
                     </span>
                 </router-link>
                 <router-link class="sp-page__nav__link" to="/projects">
                     <span class="sp-page__nav__link__content">
-                        <span class="sp-page__nav__link__icon">󱃖</span>
+                        <span class="sp-icon">󱃖</span>
                         <br>
                         Projects
                     </span>
                 </router-link>
                 <router-link class="sp-page__nav__link" to="/about">
                     <span class="sp-page__nav__link__content">
-                        <span class="sp-page__nav__link__icon">󰛓</span>
+                        <span class="sp-icon">󰛓</span>
                         <br>
                         About me
                     </span>
@@ -29,6 +29,9 @@
         <main class="sp-page__content">
             <slot/>
         </main>
+        <footer class="sp-page__footer">
+            Copyright 󰗦 {{ (new Date()).getFullYear() }} SirPatagon
+        </footer>
     </div>
 </template>
 
@@ -45,10 +48,12 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: .5rem;
+
     &__nav {
         z-index: 1;
         height: $navbar-height;
-        position: sticky;
+        position: fixed;
         top: calc(100vh - $navbar-height);
         width: 100%;
         display: flex;
@@ -111,10 +116,9 @@ export default {
                 }
             }
 
-            &__icon {
+            & .sp-icon {
                 display: inline-block;
                 font-size: 1.5em;
-                padding-right: 0.3rem; // fix for strange icon width
             }
         }
     }
@@ -123,15 +127,25 @@ export default {
         max-width: 1200px;
         width: 100%;
         overflow: hidden;
+    }
+
+    &__footer {
+        margin-top: 3rem;
+        margin-bottom: 1rem;
         padding-bottom: $navbar-height;
     }
 
     @media screen and (min-width: 512px) {
         &__content {
             padding-bottom: 0;
+            margin-top: 2rem;
         }
         &__nav {
+            position: sticky;
             top: 0;
+        }
+        &__footer {
+            padding-bottom: 0;
         }
     }
 }

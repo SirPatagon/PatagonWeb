@@ -77,12 +77,12 @@ You can find me on:
     border-radius: 6px 6px 0 0;
     background: #0005;
     backdrop-filter: blur(5px);
-    margin: $margin;
+    margin: $margin 0;
 
     &__content {
         display: block;
         height: 620px;
-        max-height: calc(100vh - $navbar-height - $header-height - $margin);
+        max-height: calc(95vh - $navbar-height - $header-height - $margin);
         white-space: pre-wrap;
         word-wrap: break-word;
         word-break: break-all;

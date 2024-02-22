@@ -31,18 +31,5 @@ export default {
 .home {
     height: 75%;
 }
-.sp-header {
-    &__subtext {
-        font-size: 4vw;
-
-        @media screen and (min-width: 800px) {
-            font-size: 32px;
-        }
-    }
-    &__image {
-        width: 90vw;
-        max-width: 512px;
-    }
-}
 
 </style>
