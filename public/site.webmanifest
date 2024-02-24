@@ -1,0 +1,12 @@
+{
+  "short_name": "SirPatagon.net",
+  "name": "SirPatagon.net",
+  "icons": [{
+    "src": "icon.png",
+    "type": "image/png",
+    "sizes": "192x192"
+  }],
+  "start_url": "/?utm_source=homescreen",
+  "background_color": "#320032",
+  "theme_color": "#320032"
+}
