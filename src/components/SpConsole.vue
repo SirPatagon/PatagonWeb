@@ -2,7 +2,7 @@
     <div class="sp-console">
         <div class="sp-console__header">visitor@sirpatagon.net:~</div>
         <label class="sp-console__content">
-            <slot/>visitor@sirpatagon.net:~$
+            <span v-html="outputText"></span><br>visitor@sirpatagon.net:{{ location }}$
             <span>{{ textBeforeCaret }}</span>
             <span :class="{ 'visibility-hack':caretVisibilityHack }"
                   class="sp-console__content__caret">
@@ -10,7 +10,7 @@
             </span>
             <span>{{ textAfterCaret }}</span>
             <input class="sp-console__input" type="text" @input="updateCaretPosition"
-                   @keydown="updateCaretPosition" @keyup="updateCaretPosition"
+                   @keydown="keyDown" @keyup="updateCaretPosition"
                    @select="e=>{e.target.selectionStart = e.target.selectionEnd;}"/>
         </label>
     </div>
@@ -29,29 +29,64 @@ export default {
             fileSystem: {
                 home: {
                     visitor: {
-                        'welcome.txt': `Welcome to my website!
-You can find me on:
+                        'welcome.txt': `
+                            Welcome to my website!
+                            You can find me on:
 
-󰊤 GitHub   => https://github.com/SirPatagon
+                            󰊤 GitHub   => https://github.com/SirPatagon
 
-󰮠 GitLab   => https://gitlab.com/SirPatagon
+                            󰮠 GitLab   => https://gitlab.com/SirPatagon
 
-󰕄 Twitter  => https://twitter.com/SirPatagon
+                            󰕄 Twitter  => https://twitter.com/SirPatagon
 
-󰫑 Mastodon => https://mastodon.social/@sirpatagon
+                            󰫑 Mastodon => https://mastodon.social/@sirpatagon
 
-󰓓 Steam    => https://steamcommunity.com/id/SirPatagon/
+                            󰓓 Steam    => https://steamcommunity.com/id/SirPatagon/
 
-󰗃 YouTube  => https://www.youtube.com/channel/UClN8kD_2x5kIzmI852U4STw
+                            󰗃 YouTube  => https://www.youtube.com/channel/UClN8kD_2x5kIzmI852U4STw
 
-󰊫 Gmail    => mailto:sirpatagon+development@gmail.com`,
+                            󰊫 Gmail    => sirpatagon+development@gmail.com
+
+                            DISCLAIMER: This console does not have any commands yet. 
+                            └           Please be patient -> I'll implement them soon 🙏.
+
+                        `,
                     },
                 },
             },
+            location: '~',
+            outputText: '',
         };
     },
     methods: {
+        prepareText (text) {
+            let lines = text.split('\n');
+
+            if (!lines[0].trim())
+                lines = lines.slice(1);
+
+            if (!lines[lines.length - 1].trim())
+                lines = lines.slice(0, lines.length - 1);
+
+            return lines.map(l => {
+                const linkRegex = /(?:(?:https?|ftp|file):\/\/|www\.|ftp\.)(?:\([-A-Z0-9+&@#/%=~_|$?!:,.]*\)|[-A-Z0-9+&@#/%=~_|$?!:,.])*(?:\([-A-Z0-9+&@#/%=~_|$?!:,.]*\)|[A-Z0-9+&@#/%=~_|$])/igm;
+                const mailRegex = /(\w|\+)+@\w+\.\w+/gi;
+                let line = l.trim();
+                line = line.replace(linkRegex, match => `<a href="${match}">${match}</a>`);
+                line = line.replace(mailRegex, match => `<a href="mailto:${match}">${match}</a>`);
+                return line;
+            }).join('\n');
+        },
+        keyDown (e) {
+            if (e.key === 'Enter')
+                this.executeCommand(e);
+            else
+                this.updateCaretPosition(e);
+        },
         updateCaretPosition (e) {
+            if (e.key === 'Enter')
+                return;
+
             this.caretVisibilityHack = true;
             const text = e.target.value;
             const position = e.target.selectionStart;
@@ -63,6 +98,29 @@ You can find me on:
                 this.caretVisibilityHack = false;
             }, 100);
         },
+        getText () {
+            return this.textBeforeCaret + this.textInCaret + this.textAfterCaret;
+        },
+        clearText () {
+            this.textBeforeCaret = '';
+            this.textInCaret = ' ';
+            this.textAfterCaret = '';
+        },
+        executeCommand (e) {
+            const command = this.getText();
+            this.outputText += '\n' + `visitor@sirpatagon.net:${this.location}$ ` + command;
+            e.target.value = '';
+            this.clearText();
+
+            // Hack for the rendering to update first
+            setTimeout(() => {
+                const scrollContainer = this.$el.querySelector('.sp-console__content');
+                scrollContainer.scrollTo(0, scrollContainer.scrollHeight);
+            }, 100);
+        },
+    },
+    mounted () {
+        this.outputText = this.prepareText(this.fileSystem.home.visitor['welcome.txt']);
     },
 };
 </script>

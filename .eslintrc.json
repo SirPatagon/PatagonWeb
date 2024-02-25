@@ -46,6 +46,10 @@
         "indent": [
             "warn", 
             4
+        ],
+        "curly": [
+            "warn",
+            "multi-or-nest"
         ]
     }
 }

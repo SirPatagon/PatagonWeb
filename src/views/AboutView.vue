@@ -7,11 +7,7 @@
                 </sp-header>
         </template>
         <p>
-            So you really want to know something about me? That's... unexpected.
-        </p>
-        <p>
-            Well, fine but there's not really much to say:
-            I'm a software developer and IT specialist from germany.
+            I'm a software developer and IT specialist from Germany.
             I've always loved tinkering with my PC since I was in third grade and that has not really changed since then.
         </p>
         <p>
