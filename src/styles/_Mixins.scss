@@ -1,0 +1,5 @@
+@mixin gradient-text {
+    background: linear-gradient(135deg, #ae00ae 0%, #aeae00 100%);
+    background-clip: text;
+    color: transparent;
+}
